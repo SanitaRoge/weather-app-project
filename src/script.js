@@ -1,15 +1,16 @@
 function displayTemperature(response) {
   let cityName = document.querySelector("#city-name");
-  cityName.innerHTML = response.data.name;
   let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
   let feelsLike = document.querySelector("#feels-like");
-  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
   let conditionDescription = document.querySelector("#description");
-  conditionDescription.innerHTML = response.data.weather[0].description;
-  console.log(response.data.wind.speed);
   let windSpeed = document.querySelector("#wind-speed");
+  let humidityElement = document.querySelector("#humidity");
+  cityName.innerHTML = response.data.name;
+  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  conditionDescription.innerHTML = response.data.weather[0].description;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 
 let cityName = "Bogota";
