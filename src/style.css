@@ -24,10 +24,10 @@ li {
   margin: 0;
   color: #92a4c0;
 }
-
-footer {
-  font-size: 10px;
-}
 .temperature {
   font-size: 46px;
+}
+footer {
+  font-size: 10px;
+  text-align: center;
 }
