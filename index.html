@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
-    <link rel="stylesheet" href="src/style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="weather-app">
@@ -34,27 +35,29 @@
               />
             </form>
           </div>
-          <div clas="col-md-3">
+          <div class="col-md-3">
             <a href="" class="btn btn-primary">📍 My location</a>
           </div>
         </div>
         <div class="row">
           <div class="col-md-3">
             <ul>
-              <li>Bogota</li>
-              <li>Friday</li>
-              <li>18 August 2022</li>
-              <li>11:11</li>
+              <li id="city-name">Bogota</li>
+              <li id="day">Friday</li>
+              <li id="date">18 August 2022</li>
+              <li id="time">11:11</li>
             </ul>
           </div>
           <div class="col-md-3">☀️</div>
-          <div class="col-md-3">20° <span>C|F</span></div>
+          <div class="col-md-3">
+            <span class="temperature">28 °</span> <span> C|F</span>
+          </div>
           <div class="col-md-3">
             <ul>
-              <li>Feels like 25°</li>
-              <li>Condition: Sunny</li>
-              <li>Wind speed: 10m/s</li>
-              <li>Humidity 50%</li>
+              <li id="feels-like">Feels like <strong>25°</strong></li>
+              <li>Condition: <strong>Sunny </strong></li>
+              <li>Wind speed:<strong> 10m/s</strong></li>
+              <li>Humidity: <strong> 50% </strong></li>
             </ul>
           </div>
         </div>
