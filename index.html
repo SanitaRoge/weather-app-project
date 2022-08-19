@@ -34,9 +34,11 @@
                 id="search-button"
               />
             </form>
-          </div>
-          <div class="col-md-3">
-            <a href="" class="btn btn-primary">📍 My location</a>
+            <div class="col-md-3">
+              <a href="" class="btn btn-primary" id="current-location"
+                >📍 My location</a
+              >
+            </div>
           </div>
         </div>
         <div class="row">
@@ -48,13 +50,21 @@
               <li id="time">11:11</li>
             </ul>
           </div>
-          <div class="col-md-3">☀️</div>
-          <div class="col-md-3">
-            <span class="temperature">28 °</span> <span> C|F</span>
+          <div class="col-md-3 d-flex weather-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/106/106061.png"
+              alt="sunny"
+            />
           </div>
+
+          <div class="col-md-3">
+            <span class="temperature"> 28 </span>
+            <span class="units"> ° C | <a href="">°F</a></span>
+          </div>
+
           <div class="col-md-3">
             <ul>
-              <li id="feels-like">Feels like <strong>25°</strong></li>
+              <li>Feels like <strong>25°</strong></li>
               <li>Condition: <strong>Sunny </strong></li>
               <li>Wind speed:<strong> 10m/s</strong></li>
               <li>Humidity: <strong> 50% </strong></li>
