@@ -14,10 +14,59 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h1>Hello world</h1>
-      <a href="" class="btn btn-primary"> Click me</a>
+    <div class="weather-app">
+      <div class="container">
+        <h1>Current weather</h1>
+        <div clas="row">
+          <div class="col-md-6">
+            <form class="search">
+              <input
+                type="search"
+                id="city-input"
+                placeholder="Enter city name"
+                autocomplete="off"
+              />
+              <input
+                type="submit"
+                value="Search"
+                class="search-button"
+                id="search-button"
+              />
+            </form>
+          </div>
+          <div clas="col-md-3">
+            <a href="" class="btn btn-primary">📍 My location</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <ul>
+              <li>Bogota</li>
+              <li>Friday</li>
+              <li>18 August 2022</li>
+              <li>11:11</li>
+            </ul>
+          </div>
+          <div class="col-md-3">☀️</div>
+          <div class="col-md-3">20° <span>C|F</span></div>
+          <div class="col-md-3">
+            <ul>
+              <li>Feels like 25°</li>
+              <li>Condition: Sunny</li>
+              <li>Wind speed: 10m/s</li>
+              <li>Humidity 50%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="src/script.js"></script>
+    <footer>
+      This project is
+      <a href="https://github.com/SanitaRoge/weather-app-project">
+        open-source code
+      </a>
+      by Sanita Roge
+    </footer>
   </body>
 </html>
