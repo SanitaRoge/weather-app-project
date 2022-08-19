@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="weather-app">
@@ -42,8 +43,8 @@
         <div class="today">
           <div class="row">
             <div class="col-md-3">
+              <h2 id="city-name"></h2>
               <ul>
-                <li id="city-name"><strong>Bogota</strong></li>
                 <li id="day">Friday</li>
                 <li id="date">18 August 2022</li>
                 <li id="time">11:11</li>
@@ -57,15 +58,15 @@
             </div>
 
             <div class="col-md-3">
-              <span class="temperature"> 28 </span>
+              <span class="temperature" id="temperature"> </span>
               <span class="units"> ° C | <a href="">°F</a></span>
             </div>
 
             <div class="col-md-3">
               <ul>
-                <li>Feels like <strong>25°</strong></li>
-                <li>Condition: <strong>Sunny </strong></li>
-                <li>Wind speed:<strong> 10m/s</strong></li>
+                <li>Feels like: <span id="feels-like"> </span> °</li>
+                <li>Condition: <span id="description"> </span></li>
+                <li>Wind speed: <span id="wind-speed"> </span> m/s</li>
                 <li>Humidity: <strong> 50% </strong></li>
               </ul>
             </div>
