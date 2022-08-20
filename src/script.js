@@ -12,7 +12,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} <br> ${hours}:${minutes}`;
+  return `Updated: <br> ${day} <br> ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
