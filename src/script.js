@@ -45,10 +45,21 @@ function submitSearch(city) {
 function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
-  console.log(cityInput.value);
   submitSearch(cityInput.value);
 }
+function showCurrentLocation(position) {
+  let apiKey = "9798d0efdc49b9137ba9478ff4af211b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+  console.log(position);
+}
+let currentLocation = document.querySelector("#current-location");
+currentLocation.addEventListener("click", getCurrentLocation);
 
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showCurrentLocation);
+}
 submitSearch("Bogota");
 
 let form = document.querySelector("#search-form");

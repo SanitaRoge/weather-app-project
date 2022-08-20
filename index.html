@@ -12,6 +12,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/523fd97310.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
@@ -39,7 +40,7 @@
               />
             </div>
           <div class="col-md-3">
-            <a href="" class="btn btn-secondary" id="current-location">📍 </a>
+             <span class="btn btn-secondary" id="current-location"><i class="fa-solid fa-location-arrow fa-xl current-location"></i></span>
           </div>
           </div>
           </form>
@@ -67,9 +68,10 @@
 
             <div class="col-md-3">
               <ul>
-                <li>Condition: <span id="description"> </span></li>
-                <li>Wind speed: <span id="wind-speed"> </span> km/h</li>
-                <li>Humidity: <span id="humidity"> </span> %</li>
+                <li>CONDITION</li>
+                <li><span id="description"> </span></li>
+                <li><i class="fa-solid fa-wind fa-lg"></i> <span id="wind-speed"> </span> km/h</li>
+                <li><i class="fa-solid fa-droplet fa-lg"></i> <span id="humidity"> </span> %</li>
               </ul>
             </div>
           </div>
