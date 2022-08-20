@@ -4,6 +4,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   background-color: #ebf0f6;
+  color: #92a4c0;
 }
 h1 {
   text-align: center;
@@ -13,7 +14,7 @@ h1 {
 }
 h2 {
   text-transform: uppercase;
-  color: #92a4c0;
+
   font-size: 24px;
 }
 ul {
@@ -23,7 +24,6 @@ ul {
 li {
   list-style: none;
   margin: 0 auto;
-  color: #92a4c0;
 }
 
 li:first-letter {
@@ -79,9 +79,7 @@ a {
     rgb(6, 57, 84) 78.6%
   );
 }
-.date {
-  color: #92a4c0;
-}
+
 .current-location {
   color: #e58cdb;
 }
