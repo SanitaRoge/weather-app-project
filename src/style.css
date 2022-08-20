@@ -6,7 +6,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 30px;
-  color: #87e5da;
+  color: #98ccd3;
 }
 h2 {
   text-transform: uppercase;
@@ -43,9 +43,13 @@ form {
   max-width: 800px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid #e58cdb;
+  border: 2px solid #e58cdb;
   border-radius: 40px;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  background: linear-gradient(
+    171.8deg,
+    rgb(5, 111, 146) 13.5%,
+    rgb(6, 57, 84) 78.6%
+  );
 }
 .temperature {
   font-size: 46px;
@@ -54,7 +58,7 @@ form {
 .units {
   position: relative;
   top: -23px;
-  color: #87e5da;
+  color: #98ccd3;
 }
 .feels-like {
   color: #e58cdb;
