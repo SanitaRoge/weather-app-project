@@ -1,3 +1,20 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = String(date.getHours()).padStart(2, "0");
+  let minutes = String(date.getMinutes()).padStart(2, "0");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} <br> ${hours}:${minutes}`;
+}
+
 function displayTemperature(response) {
   let cityName = document.querySelector("#city-name");
   let currentTemperature = document.querySelector("#temperature");
@@ -5,12 +22,14 @@ function displayTemperature(response) {
   let conditionDescription = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind-speed");
   let humidityElement = document.querySelector("#humidity");
+  let dateElement = document.querySelector("#date");
   cityName.innerHTML = response.data.name;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
   conditionDescription.innerHTML = response.data.weather[0].description;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   humidityElement.innerHTML = response.data.main.humidity;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let cityName = "Bogota";
