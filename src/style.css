@@ -38,7 +38,6 @@ form {
   max-block-size: 65px;
   margin: 10px 10px;
   position: relative;
-  opacity: 50%;
 }
 .weather-app {
   max-width: 800px;
@@ -56,6 +55,9 @@ form {
   position: relative;
   top: -23px;
   color: #87e5da;
+}
+.feels-like {
+  color: #e58cdb;
 }
 .today {
   margin-top: 15px;
