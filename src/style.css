@@ -1,6 +1,9 @@
 body {
+  max-width: 900px;
+  margin: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  background-color: #ebf0f6;
 }
 h1 {
   text-align: center;
@@ -19,7 +22,7 @@ ul {
 }
 li {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   color: #92a4c0;
 }
 
@@ -34,6 +37,10 @@ footer {
 form {
   margin: 10px;
 }
+a {
+  color: #98ccd3;
+  text-decoration: none;
+}
 .weather-icon img {
   max-block-size: 65px;
   margin: 10px 10px;
@@ -45,11 +52,7 @@ form {
   padding: 20px;
   border: 2px solid #e58cdb;
   border-radius: 40px;
-  background: linear-gradient(
-    171.8deg,
-    rgb(5, 111, 146) 13.5%,
-    rgb(6, 57, 84) 78.6%
-  );
+  background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%) 50%;
 }
 .temperature {
   font-size: 46px;
@@ -64,12 +67,21 @@ form {
   color: #e58cdb;
 }
 .today {
-  margin-top: 15px;
+  margin: 0px auto;
+  max-width: 700px;
+
+  border-radius: 40px;
+  padding: 15px 30px;
+
+  background: linear-gradient(
+    171.8deg,
+    rgb(5, 111, 146) 13.5%,
+    rgb(6, 57, 84) 78.6%
+  );
 }
 .date {
   color: #92a4c0;
 }
 .current-location {
   color: #e58cdb;
-  
 }

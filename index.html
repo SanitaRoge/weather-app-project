@@ -22,7 +22,7 @@
         <h1>Current weather</h1>
        <form class="search" id="search-form">
           <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-7">
               <input
                 type="search"
                 id="city-input"
@@ -39,8 +39,8 @@
                 id="search-button"
               />
             </div>
-          <div class="col-md-3">
-             <span class="btn btn-secondary" id="current-location"><i class="fa-solid fa-location-arrow fa-xl current-location"></i></span>
+          <div class="col-md-2">
+             <span class="btn bbtn-outline-light" id="current-location"><i class="fa-solid fa-location-arrow fa-xl current-location"></i></span>
           </div>
           </div>
           </form>
@@ -53,7 +53,7 @@
 
               <div class="date" id="date"></div>
             </div>
-            <div class="col-md-3 d-flex">
+            <div class="col-md-3">
               <img src="" alt="" class="weather-icon" id="weather-icon" />
             </div>
 
@@ -62,7 +62,8 @@
               <span class="units"> ° C | <a href="">°F</a></span>
               <br />
               <span class="feels-like"
-                >Feels like: <span id="feels-like"> </span> °</span
+                > <small>Feels like</small> 
+                <span id="feels-like"> </span> °</span
               >
             </div>
 
