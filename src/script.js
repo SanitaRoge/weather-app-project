@@ -36,9 +36,20 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+function submitSearch(city) {
+  let apiKey = "9798d0efdc49b9137ba9478ff4af211b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-let cityName = "Bogota";
-let apiKey = "9798d0efdc49b9137ba9478ff4af211b";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  console.log(cityInput.value);
+  submitSearch(cityInput.value);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+submitSearch("Bogota");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
