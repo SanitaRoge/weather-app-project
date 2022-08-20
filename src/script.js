@@ -24,6 +24,8 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weather-icon");
+
+  celsiusTemperature = Math.round(response.data.main.temp);
   cityName.innerHTML = response.data.name;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
@@ -60,7 +62,32 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
-submitSearch("Bogota");
+
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function convvertCelsius(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convvertCelsius);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
+
+submitSearch("Bogota");

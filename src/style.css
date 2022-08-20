@@ -38,8 +38,13 @@ form {
   margin: 10px;
 }
 a {
-  color: #98ccd3;
   text-decoration: none;
+  color: #98ccd3;
+}
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #98ccd3;
 }
 .weather-icon img {
   max-block-size: 65px;
@@ -63,6 +68,7 @@ a {
   top: -23px;
   color: #98ccd3;
 }
+
 .feels-like {
   color: #e58cdb;
 }
@@ -82,4 +88,15 @@ a {
 
 .current-location {
   color: #e58cdb;
+}
+
+.units .active {
+  text-decoration: none;
+  cursor: default;
+  font-size: 23px;
+  color: #98ccd3;
+}
+.units .active:hover {
+  text-decoration: none;
+  font-weight: normal;
 }
