@@ -14,8 +14,13 @@ h1 {
 }
 h2 {
   text-transform: uppercase;
-
   font-size: 24px;
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 15px;
 }
 ul {
   margin: 0;
@@ -47,7 +52,7 @@ a:hover {
   color: #98ccd3;
 }
 .weather-icon img {
-  max-block-size: 65px;
+  width: 90px;
   margin: 10px 10px;
   position: relative;
 }
@@ -99,4 +104,23 @@ a:hover {
 .units .active:hover {
   text-decoration: none;
   font-weight: normal;
+}
+.weather-forecast {
+  border: 1px solid #e58cdb;
+  border-radius: 30px;
+  text-align: center;
+  margin: 10px;
+  padding: 15px;
+  background: linear-gradient(-225deg, #ff057c 0%, #8d0b93 50%, #321575 100%);
+}
+.forecast-image {
+  width: 70px;
+}
+.forecast-date {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+.forecast-temp-min {
+  font-size: 14px;
 }
