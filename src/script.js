@@ -24,7 +24,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weather-icon");
-
+  feelsLikeTemp = Math.round(response.data.main.feels_like);
   celsiusTemperature = Math.round(response.data.main.temp);
   cityName.innerHTML = response.data.name;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
@@ -66,10 +66,13 @@ function getCurrentLocation(event) {
 function convertFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let fahrenheitFeelsLike = (feelsLikeTemp * 9) / 5 + 32;
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = Math.round(fahrenheitFeelsLike);
 }
 
 function convvertCelsius(event) {
@@ -78,9 +81,12 @@ function convvertCelsius(event) {
   currentTemperature.innerHTML = Math.round(celsiusTemperature);
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
+  let celsiusFeelsLike = document.querySelector("#feels-like");
+  celsiusFeelsLike.innerHTML = Math.round(feelsLikeTemp);
 }
 
 let celsiusTemperature = null;
+let feelsLikeTemp = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertFahrenheit);
