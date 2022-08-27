@@ -108,7 +108,7 @@ a:hover {
 .weather-forecast {
   border-radius: 30px;
   text-align: center;
-  margin: 10px;
+  margin: 10px auto;
   padding: 15px;
   background: linear-gradient(-225deg, #ff057c 0%, #8d0b93 50%, #321575 100%);
 }

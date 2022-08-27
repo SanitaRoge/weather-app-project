@@ -15,6 +15,27 @@ function formatDate(timestamp) {
   return `Updated: <br> ${day} <br> ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+    <div class="forecast-date"> ${day} </div>
+    <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="image" class="forecast-image"></img>
+    <div class="forecast-temperature">
+      <span class="forecast-temp-max">20°C</span> <br>
+      <span class="forecast-temp-min">10°C</span>
+    </div>
+  </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let cityName = document.querySelector("#city-name");
   let currentTemperature = document.querySelector("#temperature");
@@ -97,3 +118,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 submitSearch("Bogota");
+displayForecast();
